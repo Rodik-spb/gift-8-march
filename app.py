@@ -49,28 +49,6 @@ def safe_image(file_name, width=300):
     else:
         st.warning(f"⚠️ Файл '{file_name}' не найден.")
 
-# --- ЛОГИКА ПАРОЛЯ ---
-if 'authenticated' not in st.session_state:
-    st.session_state['authenticated'] = False
-
-def check_password():
-    # ЗДЕСЬ МОЖНО ИЗМЕНИТЬ ПАРОЛЬ
-    correct_passwords = ["бежевого", "золотого"]
-    user_input = st.session_state["password_input"].strip().lower()
-    if user_input in correct_passwords:
-        st.session_state["authenticated"] = True
-        del st.session_state["password_input"]
-    else:
-        st.error("❌ Неверно! Попробуй еще раз")
-
-# Если пользователь еще не прошел проверку
-if not st.session_state['authenticated']:
-    st.title("🔐 Доступ ограничен")
-    st.write("Негодяев не пускаем, сначала пройдите проверку")
-    st.info("💡 **Наводящий вопрос:** Какого цвета Кия?")
-    st.text_input("Введи секретное слово:", type="password", key="password_input", on_change=check_password)
-    st.stop()  # Останавливает выполнение кода здесь, пока пароль не верный
-
 
 # --- ЗАГОЛОВОК ---
 st.title("С праздником тебя, Татьянчик!")
@@ -159,3 +137,4 @@ if user_final:
             st.error(f"Артист угадан! Но в тесте есть ошибки. Правильно отвечено на {correct_count} из {len(questions)}")
     else:
         st.warning("Чью песню мы включаем на всю громкость, когда рядом есть Семен и Олег?")
+
