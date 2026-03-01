@@ -86,10 +86,6 @@ questions = [
      "o": ["I LOVE LIDA", "I HATE LIDA", "LIDA ONE LOVE"],
      "a": "I HATE LIDA"},
 
-    {"q": "На сколько миллионов украли сумки у Игоря Синяка?",
-     "o": ["25", "35", "50"],
-     "a": "35"
-     "h_text": "452000$"}
 ]
 
 correct_count = 0
@@ -136,6 +132,7 @@ if user_final:
             st.error(f"Артист угадан! Но в тесте есть ошибки. Правильно отвечено на {correct_count} из {len(questions)}")
     else:
         st.warning("Чью песню мы включаем на всю громкость, когда рядом есть Семен и Олег?")
+
 
 
 
