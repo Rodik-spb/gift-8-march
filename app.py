@@ -134,13 +134,13 @@ st.subheader("🔥 Финальный вопрос")
 col_text, col_gif = st.columns([2, 1])
 
 with col_text:
-    user_final = st.text_input("На чей концерт ты хотела бы попасть?")
+    user_final = st.text_input("Ты меня любишь?")
 
 with col_gif:
     safe_image("pocoyo.gif", width=160)
 
 
-final_artist = "Любэ"
+final_artist = "Да"
 
 if user_final:
     if final_artist.lower() in user_final.lower():
@@ -150,9 +150,10 @@ if user_final:
             st.link_button("🎟 ЗАБРАТЬ ПОДАРОК", "ССЫЛКА")
             st.snow()
         else:
-            st.error(f"Артист угадан! Но в тесте есть ошибки. Правильно отвечено на {correct_count} из {len(questions)}")
+            st.error(f"Правильный! Но в тесте есть ошибки. Правильно отвечено на {correct_count} из {len(questions)}")
     else:
-        st.warning("Чью песню мы включаем на всю громкость, когда рядом есть Семен и Олег?")
+        st.warning("Ответ: Да?")
+
 
 
 
