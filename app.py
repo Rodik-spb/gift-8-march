@@ -3,7 +3,7 @@ import os
 import base64
 
 # 1. Настройка страницы
-st.set_page_config(page_title="Жойский тест", page_icon="🧩")
+st.set_page_config(page_title="тест-подарок", page_icon="🎁")
 
 # 2. ТЕМНЫЙ ГРАДИЕНТ И УЛУЧШЕННЫЙ БЕЛЫЙ ТЕКСТ (CSS)
 st.markdown("""
@@ -51,11 +51,11 @@ def safe_image(file_name, width=300):
 
 
 # --- ЗАГОЛОВОК ---
-st.title("С праздником тебя, Татьянчик!")
-st.write("Ответь на все вопросы правильно, чтобы получить подарок!")
+st.title("С праздником тебя, Дашулька!")
+st.write("Ответь на все вопросы правильно, чтобы стать ближе к подарку!")
 
 # Главный котик (проверка связи)
-safe_image("catt.png", width=180)
+safe_image("chonguk.png", width=90)
 
 # 3. Список вопросов
 questions = [
@@ -137,4 +137,5 @@ if user_final:
             st.error(f"Артист угадан! Но в тесте есть ошибки. Правильно отвечено на {correct_count} из {len(questions)}")
     else:
         st.warning("Чью песню мы включаем на всю громкость, когда рядом есть Семен и Олег?")
+
 
