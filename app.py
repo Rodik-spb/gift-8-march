@@ -147,12 +147,13 @@ if user_final:
         if correct_count == len(questions):
             st.balloons()
             st.success("Все ответы верны! 🎉")
-            st.link_button("🎟 ЗАБРАТЬ ПОДАРОК", "ССЫЛКА")
+            st.link_button("🎟 ЗАБРАТЬ ПОДАРОК", "https://drive.google.com/drive/u/0/folders/1AG_NiuMDQAKNaeg8AuC2xAHBj9_Ds5IS")
             st.snow()
         else:
             st.error(f"Правильный! Но в тесте есть ошибки. Правильно отвечено на {correct_count} из {len(questions)}")
     else:
         st.warning("Ответ: Да?")
+
 
 
 
