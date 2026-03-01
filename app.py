@@ -54,7 +54,7 @@ if 'authenticated' not in st.session_state:
 
 def check_password():
     # ЗДЕСЬ МОЖНО ИЗМЕНИТЬ ПАРОЛЬ
-    correct_passwords = ["бежевого", "золотого"]
+    correct_passwords = ["29 июля"]
     user_input = st.session_state["password_input"].strip().lower()
     if user_input in correct_passwords:
         st.session_state["authenticated"] = True
@@ -66,7 +66,7 @@ def check_password():
 if not st.session_state['authenticated']:
     st.title("🔐 Доступ ограничен")
     st.write("Негодяев не пускаем, сначала пройдите проверку")
-    st.info("💡 **Наводящий вопрос:** Какого цвета Кия?")
+    st.info("💡 **Наводящий вопрос:** Когда мы начали встречаться?")
     st.text_input("Введи секретное слово:", type="password", key="password_input", on_change=check_password)
     st.stop()  # Останавливает выполнение кода здесь, пока пароль не верный
 
@@ -153,6 +153,7 @@ if user_final:
             st.error(f"Артист угадан! Но в тесте есть ошибки. Правильно отвечено на {correct_count} из {len(questions)}")
     else:
         st.warning("Чью песню мы включаем на всю громкость, когда рядом есть Семен и Олег?")
+
 
 
 
